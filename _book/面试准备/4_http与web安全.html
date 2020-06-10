@@ -1,0 +1,471 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>http与web安全 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5_React.html" />
+    
+    
+    <link rel="prev" href="3_浏览器.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    面试准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_CSS.html">
+            
+                <a href="1_CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2_JS.html">
+            
+                <a href="2_JS.html">
+            
+                    
+                    JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3_浏览器.html">
+            
+                <a href="3_浏览器.html">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="4_http与web安全.html">
+            
+                <a href="4_http与web安全.html">
+            
+                    
+                    http与web安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="5_React.html">
+            
+                <a href="5_React.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6_工具与其他.html">
+            
+                <a href="6_工具与其他.html">
+            
+                    
+                    工具与其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >http与web安全</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x9762;&#x8BD5;&#x51C6;&#x5907;4---http&#x4E0E;web&#x5B89;&#x5168;">&#x9762;&#x8BD5;&#x51C6;&#x5907;4 - http&#x4E0E;web&#x5B89;&#x5168;</h1>
+<h2 id="1&#x3001;httphttps-&#x534F;&#x8BAE;">1&#x3001;http/https &#x534F;&#x8BAE;</h2>
+<h3 id="http20">http2.0</h3>
+<ul>
+<li>&#x591A;&#x8DEF;&#x590D;&#x7528;</li>
+<li>&#x9996;&#x90E8;&#x538B;&#x7F29;</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x63A8;&#x9001;</li>
+<li>&#x4E8C;&#x8FDB;&#x5236;&#x5206;&#x5E27;&#x5C42;</li>
+</ul>
+<h3 id="https">https</h3>
+<h2 id="2&#x3001;&#x7F13;&#x5B58;&#x7B56;&#x7565;">2&#x3001;&#x7F13;&#x5B58;&#x7B56;&#x7565;</h2>
+<h3 id="&#x5F3A;&#x7F13;&#x5B58;">&#x5F3A;&#x7F13;&#x5B58;</h3>
+<blockquote>
+<p>&#x4E0D;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x6839;&#x636E;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x95F4;&#x5224;&#x65AD;&#x662F;&#x5426;&#x547D;&#x4E2D;&#xFF0C;&#x547D;&#x4E2D;&#x8FD4;&#x56DE;200&#xFF0C;&#x5B58;&#x50A8;&#x4E8E;&#x5185;&#x5B58;/&#x786C;&#x76D8;&#x4E2D;</p>
+</blockquote>
+<ul>
+<li>&#x67E5;&#x770B;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5;&#xFF1A;cache-control<ul>
+<li>max-age:</li>
+<li>public/private</li>
+<li>no-store: &#x4E0D;&#x7F13;&#x5B58; </li>
+<li>no-cache: &#x8DF3;&#x8FC7;&#x8D70;&#x534F;&#x5546;&#x7F13;&#x5B58;</li>
+</ul>
+</li>
+<li>&#x67E5;&#x770B;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5;&#xFF1A;expires(GMT)&#xFF0C;&#x4E0D;&#x51C6;</li>
+</ul>
+<h3 id="&#x534F;&#x5546;&#x7F13;&#x5B58;">&#x534F;&#x5546;&#x7F13;&#x5B58;</h3>
+<blockquote>
+<p>&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4EA4;&#x7684;&#x54CD;&#x5E94;&#x5B57;&#x6BB5;&#x7ED9;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7531;&#x670D;&#x52A1;&#x5668;&#x5224;&#x65AD;&#x662F;&#x5426;&#x547D;&#x4E2D;&#x7F13;&#x5B58;&#xFF0C;&#x547D;&#x4E2D;&#x8FD4;&#x56DE;304&#xFF0C;&#x5426;&#x5219;200</p>
+</blockquote>
+<ul>
+<li>&#x67E5;&#x770B;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5;&#xFF1A;Etag<ul>
+<li>&#x63D0;&#x4EA4;&#x5B57;&#x6BB5;&#xFF1A;if-None-Match</li>
+</ul>
+</li>
+<li>&#x67E5;&#x770B;&#x54CD;&#x5E94;&#x5934;&#x5B57;&#x6BB5;&#xFF1A;Last-Modified<ul>
+<li>&#x63D0;&#x4EA4;&#x5B57;&#x6BB5;&#xFF1A;if-Modified-Since</li>
+<li>&#x7F3A;&#x70B9;&#xFF1A;<ul>
+<li>&#x6700;&#x5C0F;&#x7C92;&#x5EA6;&#x5230;S&#xFF0C;1S&#x5185;&#x4FEE;&#x6539;&#x7684;&#x65E0;&#x6CD5;&#x68C0;&#x6D4B;</li>
+<li>&#x5185;&#x5BB9;&#x4E0D;&#x53D8;&#xFF0C;&#x53EA;&#x662F;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x5E0C;&#x671B;&#x88AB;&#x68C0;&#x6D4B;&#x5230;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3&#x3001;&#x5E38;&#x89C1;&#x72B6;&#x6001;&#x7801;">3&#x3001;&#x5E38;&#x89C1;&#x72B6;&#x6001;&#x7801;</h2>
+<h5 id="1xx">1XX</h5>
+<h5 id="2xx">2XX</h5>
+<ul>
+<li>200: &#x6210;&#x529F;</li>
+<li>204: &#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x65E0;&#x5185;&#x5BB9;</li>
+<li>206: &#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x90E8;&#x5206;&#x5185;&#x5BB9;</li>
+</ul>
+<h5 id="3xx">3XX</h5>
+<ul>
+<li>301: &#x6C38;&#x4E45;&#x91CD;&#x5B9A;&#x5411;</li>
+<li>302: &#x4E34;&#x65F6;&#x91CD;&#x5B9A;&#x5411;</li>
+<li>304: &#x5185;&#x5BB9;&#x672A;&#x4FEE;&#x6539;&#xFF0C;&#x53EF;&#x7528;&#x7F13;&#x5B58;</li>
+</ul>
+<h5 id="4xx">4XX</h5>
+<ul>
+<li>401: &#x672A;&#x6388;&#x6743;</li>
+<li>403: &#x7981;&#x6B62;&#x8BF7;&#x6C42;</li>
+<li>404: &#x8D44;&#x6E90;&#x4E0D;&#x5B58;&#x5728;</li>
+</ul>
+<h5 id="5xx">5XX</h5>
+<ul>
+<li>500: &#x670D;&#x52A1;&#x5668;&#x5F02;&#x5E38;</li>
+</ul>
+<h2 id="4&#x3001;getpost">4&#x3001;get/post</h2>
+<ul>
+<li>get&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5728;URL&#x4E0A;&#xFF0C;post&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5728;&#x8BF7;&#x6C42;&#x4F53;&#x5185;</li>
+<li>get&#x8BF7;&#x6C42;&#x94FE;&#x63A5;&#x6709;&#x4E0A;&#x9650;&#xFF0C;post&#x8BF7;&#x6C42;&#x65E0;&#x4E0A;&#x9650;</li>
+<li>get&#x8BF7;&#x6C42;&#x53EF;&#x7F13;&#x5B58;&#xFF0C;post&#x8BF7;&#x6C42;&#x4E0D;&#x53EF;&#x4EE5;</li>
+</ul>
+<h2 id="5&#x3001;websocket">5&#x3001;websocket</h2>
+<blockquote>
+<p>&#x6301;&#x4E45;&#x5316;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x53EF;&#x4E3B;&#x52A8;push</p>
+</blockquote>
+<h2 id="6&#x3001;tcp&#x4E09;&#x6B21;&#x63E1;&#x624B;">6&#x3001;TCP&#x4E09;&#x6B21;&#x63E1;&#x624B;</h2>
+<ul>
+<li>C --&gt; syn&#x8BF7;&#x6C42;&#xFF0C;&#x8FDB;&#x5165;syn_send&#x72B6;&#x6001;</li>
+<li>S --&gt; syn + ack&#x5305;&#xFF0C;&#x8FDB;&#x5165;syn_recv&#x72B6;&#x6001;</li>
+<li>C --&gt; ack&#x5305;&#xFF0C;&#x53CC;&#x65B9;&#x8FDB;&#x5165;established&#x72B6;&#x6001;</li>
+</ul>
+<h2 id="7&#x3001;tcp&#x56DB;&#x6B21;&#x6325;&#x624B;">7&#x3001;TCP&#x56DB;&#x6B21;&#x6325;&#x624B;</h2>
+<ul>
+<li>C --&gt; FIN&#x5305;&#xFF0C;&#x8FDB;&#x5165;FIN_wait&#x72B6;&#x6001;</li>
+<li>S --&gt; ACK&#x5305;&#xFF0C;&#x8FDB;&#x5165;close_wait&#x72B6;&#x6001;</li>
+<li>S --&gt; FIN&#x5305;/ACK&#x5305;&#xFF0C;&#x8FDB;&#x5165;last_ack&#x72B6;&#x6001;</li>
+<li>C --&gt; ACK&#x5305;&#xFF0C;&#x6700;&#x5927;&#x7B49;&#x5F85;2SML&#xFF0C;&#x8FDB;&#x5165;close&#x72B6;&#x6001;</li>
+</ul>
+<h2 id="8&#x3001;nodejs-&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;">8&#x3001;NodeJS &#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;</h2>
+<ul>
+<li><strong>timers</strong>&#xFF1A;&#x5B9A;&#x65F6;&#x5668;setTimeout&#x548C;seInterval&#x7684;&#x6267;&#x884C;&#xFF0C;&#x5C06;callback&#x52A0;&#x5165;&#x961F;&#x5217;&#x4E2D;</li>
+<li>pending callbacks&#xFF1A;&#x4E00;&#x4E9B;I/O&#x7684;callback&#xFF0C;&#x63A8;&#x8FDF;&#x5230;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x4E2D;&#x6267;&#x884C;</li>
+<li>idle, prepare&#xFF1A;&#x5185;&#x90E8;&#x7684;&#x4E00;&#x4E9B;&#x4E8B;&#x4EF6;</li>
+<li><strong>poll</strong>&#xFF1A;&#x8F6E;&#x5FAA;&#xFF0C;i/o&#xFF0C;&#x56DE;&#x8C03;&#xFF0C;fs.readFile()</li>
+<li><strong>check</strong>&#xFF1A;setImmediate&#x7684;callback&#x6267;&#x884C;</li>
+<li>close callbacks&#xFF1A;&#x4E00;&#x4E9B;&#x5173;&#x95ED;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5982;socket</li>
+</ul>
+<h2 id="9&#x3001;&#x8DE8;&#x57DF;">9&#x3001;&#x8DE8;&#x57DF;</h2>
+<h3 id="jsonp">JSONP</h3>
+<blockquote>
+<p>&#x5229;&#x7528;script&#x6807;&#x7B7E;</p>
+</blockquote>
+<h3 id="cros">CROS</h3>
+<blockquote>
+<p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8BBE;&#x7F6E;<code>Access-Control-Allow-Origin&#xFF1A;*</code></p>
+</blockquote>
+<h2 id="10&#x3001;&#x5B89;&#x5168;">10&#x3001;&#x5B89;&#x5168;</h2>
+<h3 id="xss&#x653B;&#x51FB;&#xFF1A;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;">XSS&#x653B;&#x51FB;&#xFF1A;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;</h3>
+<p>&#x8868;&#x73B0;&#xFF1A;</p>
+<ol>
+<li>&#x76D7;&#x53D6;cookie</li>
+<li>&#x76D1;&#x542C;&#x7528;&#x6237;&#x884C;&#x4E3A;&#xFF0C;&#x6BD4;&#x5982;&#x8F93;&#x5165;&#x64CD;&#x4F5C;&#x76F4;&#x63A5;&#x5230;&#x9ED1;&#x5BA2;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x4FEE;&#x6539;DOM&#x4F2A;&#x9020;&#x767B;&#x5F55;&#x8868;&#x5355;</li>
+<li>&#x5728;&#x9875;&#x9762;&#x751F;&#x6210;&#x6D6E;&#x7A97;&#x5E7F;&#x544A;</li>
+</ol>
+<p>&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ol>
+<li>&#x5B58;&#x50A8;&#x578B;&#xFF1A;&#x63D0;&#x4EA4;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x9875;&#x9762;&#x6E32;&#x67D3;&#x76F4;&#x63A5;&#x6267;&#x884C;</li>
+<li>&#x53D1;&#x5C04;&#x578B;&#xFF1A;&#x6076;&#x610F;&#x811A;&#x672C;&#x4F5C;&#x4E3A;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x63D0;&#x4EA4;&#x5230;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#xFF0C;&#x9875;&#x9762;&#x76F4;&#x63A5;&#x6267;&#x884C;&#xFF08;&#x4E0D;&#x5B58;&#x50A8;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#xFF09;</li>
+<li>&#x6587;&#x6863;&#x578B;&#xFF1A;&#x4E0D;&#x7ECF;&#x8FC7;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x52AB;&#x6301;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x4FEE;&#x6539;&#x9875;&#x9762;HTML&#x6587;&#x6863;</li>
+</ol>
+<p>&#x9632;&#x8303;&#xFF1A; ==&gt; &#x907F;&#x514D;&#x811A;&#x672C;&#x5728;&#x89C8;&#x5668;&#x4E2D;&#x76F4;&#x63A5;&#x6267;&#x884C;</p>
+<ul>
+<li>&#x5BF9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x8F6C;&#x7801; / &#x8FC7;&#x6EE4;</li>
+<li>&#x8BBE;&#x7F6E;cookie &#x7684;httponly&#x5C5E;&#x6027;</li>
+</ul>
+<h3 id="csrf&#x653B;&#x51FB;&#xFF1A;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;--&#x8BF1;&#x5BFC;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x94FE;&#x63A5;&#xFF0C;&#x6253;&#x5F00;&#x9ED1;&#x5BA2;&#x7F51;&#x7AD9;&#xFF0C;&#x57FA;&#x4E8E;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x767B;&#x5F55;&#x6001;&#x53D1;&#x8D77;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;">CSRF&#x653B;&#x51FB;&#xFF1A;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020; ==&gt; &#x8BF1;&#x5BFC;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x94FE;&#x63A5;&#xFF0C;&#x6253;&#x5F00;&#x9ED1;&#x5BA2;&#x7F51;&#x7AD9;&#xFF0C;&#x57FA;&#x4E8E;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x767B;&#x5F55;&#x6001;&#x53D1;&#x8D77;&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;</h3>
+<p>&#x8868;&#x73B0;&#xFF1A;</p>
+<ol>
+<li>&#x81EA;&#x52A8;get&#x8BF7;&#x6C42;</li>
+<li>&#x81EA;&#x52A8;post&#x8BF7;&#x6C42;</li>
+<li>&#x8BF1;&#x5BFC;&#x70B9;&#x51FB;get&#x8BF7;&#x6C42;</li>
+</ol>
+<p>&#x9632;&#x8303;&#xFF1A;</p>
+<ul>
+<li>&#x5229;&#x7528;cookie &#x7684; samesite</li>
+<li>&#x9A8C;&#x8BC1;&#x6765;&#x6E90;&#x7AD9;&#x70B9;&#xFF1A;origin / referer</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3_浏览器.html" class="navigation navigation-prev " aria-label="Previous page: 浏览器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5_React.html" class="navigation navigation-next " aria-label="Next page: React">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"http与web安全","level":"1.2.4","depth":2,"next":{"title":"React","level":"1.2.5","depth":2,"path":"面试准备/5_React.md","ref":"面试准备/5_React.md","articles":[]},"previous":{"title":"浏览器","level":"1.2.3","depth":2,"path":"面试准备/3_浏览器.md","ref":"面试准备/3_浏览器.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"面试准备/4_http与web安全.md","mtime":"2020-06-10T16:18:07.281Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-10T16:03:12.686Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
