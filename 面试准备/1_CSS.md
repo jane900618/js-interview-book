@@ -3,8 +3,8 @@
 ## 1、盒模型
 > CSS对应的属性是`box-sizing`
 
-* box-sizing: border-box ==> IE模型
-* box-sizing: content-box ==> 标准盒模型
+* box-sizing: border-box ==> IE模型(width + padding + border)
+* box-sizing: content-box ==> 标准盒模型(width)
 
 ## 2、BFC
 > BFC ==> 块级格式化上下文，实质就是一个独立的区域，内外的元素不会互相影响。
@@ -91,5 +91,6 @@ animation: animationname 2s ease 1s 3/infinite
 * align-self: center / stretch
 
 ## 9、移动端适配
-
+### 概念
+* 设备像素比（dpr）：
 
